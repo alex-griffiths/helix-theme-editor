@@ -1,0 +1,26 @@
+{
+  "name": "helix-theme-editor",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "setup": "npm install && npm run build:highlighter",
+    "build:highlighter": "cargo build --release --manifest-path highlighter/Cargo.toml",
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node server/serve.js",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "snapshot-builtins": "node scripts/snapshot-builtins.js"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tsconfig/svelte": "^5.0.8",
+    "svelte": "^5.57.1",
+    "svelte-check": "^4.7.6",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.1"
+  },
+  "dependencies": {
+    "smol-toml": "^1.9.0"
+  }
+}
